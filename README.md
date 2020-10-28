@@ -1,6 +1,6 @@
-# Noteworthy
+# Hanworthy
 
-Noteworthy is a minimalist Hugo theme for writers and bloggers.
+Hanworthy is a minimalist Hugo theme for bloggers. Forked from https://github.com/kimcc/hugo-theme-noteworthy.
 
 ![Noteworthy desktop screenshot](https://github.com/kimcc/hugo-theme-noteworthy/blob/master/images/screenshot.png)
 
@@ -18,15 +18,28 @@ Noteworthy is a minimalist Hugo theme for writers and bloggers.
 * SCSS for styling
 
 
-## Installation
+## Getting Started
 
-Navigate to the root directory of your Hugo site and clone this repository.
+Install [Hugo][Hugo](https://gohugo.io/getting-started/quick-start/).
 
+```sh
+hugo new site myblog.com
+cd myblog.com
+git init
+git submodule add https://github.com/hantuzun/hanworthy.git themes/hanworthy
+echo 'theme = "hanworthy"' >> config.toml
 ```
-git clone https://github.com/kimcc/hugo-theme-noteworthy.git themes/noteworthy
+
+```sh
+hugo new posts/hello-world.md
 ```
 
-Refer to the [Hugo docs](https://gohugo.io/getting-started/quick-start/) for more information.
+```sh
+hugo server -D
+```
+
+Navigate to your new blog at http://localhost:1313/.
+
 
 ## Image shortcode for large images
 
