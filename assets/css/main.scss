@@ -59,14 +59,11 @@ $code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monos
 
 html {
     font-family: $serif;
+    max-width: 512px;
+    margin: 0 auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     color: $black;
     word-wrap: break-word;
-}
-
-.content {
-    max-width: 512px;
-    margin: 0 auto;
 }
 
 h1 {
