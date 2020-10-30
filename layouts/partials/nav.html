@@ -4,8 +4,11 @@
   <div class="nav-menu">
   {{ range .Site.Menus.main }}
     <a class="nav-link"
+       {{ if eq .Name "Subscribe"}}
+       href="{{.URL}}" target="_blank"  rel="noopener"
+       {{else}}
        href="{{ .URL | relLangURL }}"
-       {{ if eq .Name "Subscribe"}} target="_blank" {{end}}
+       {{end}}
     >
       {{ .Name }}
     </a>
