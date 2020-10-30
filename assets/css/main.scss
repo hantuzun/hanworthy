@@ -12,14 +12,11 @@ $extra-light-gray: #E1E8ED;
 $extra-extra-light-gray: #F5F8FA;
 
 // FONTS
-$serif: "Noto Serif","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,serif;
-$sans-serif: "Noto Sans","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,sans-serif;
-$code: Menlo,Monaco,"Courier New",monospace;
+$serif: "Liberation Serif", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", Times, serif;	
+$sans-serif: "Liberation Sans", "Open Sans", FreeSans, "Helvetica Neue", Helvetica, Roboto, "Trebuchet MS", Arial, sans-serif;
+$code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
 
 /* SASS IMPORT ========================================================================== */
-
-// CUSTOM FONTS
-@import "partials/_fonts";
 
 // THRID PARTY
 @import "vendor/normalize";
@@ -61,6 +58,7 @@ $code: Menlo,Monaco,"Courier New",monospace;
 // }
 
 html {
+    font-family: $serif;
     max-width: 512px;
     margin: 0 auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -68,11 +66,9 @@ html {
 }
 
 h1 {
-    font-size: 1.9rem;
+    font-family: $sans-serif;
     padding-top: 0.2rem;
     margin: 0.5em 0em 0.75em 0rem;
-    font-family: $serif;
-    font-weight: 600;
     line-height: 1.3rem;
 }
 
@@ -82,7 +78,6 @@ h4,
 h5,
 h6 {
     margin: 1.25em 0em 0.75em 0rem;
-    font-family: $serif;
     font-weight: 600;
 }
 
@@ -170,7 +165,7 @@ time {
 hr {
     border: 0;
     height: 0;
-    border-bottom: 1px solid $extra-extra-light-gray;
+    border-bottom: 1px solid $extra-light-gray;
 }
 
 ul,
@@ -272,17 +267,17 @@ table {
 nav {
     text-align: center;
     max-width: 100%;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .site-title {
     a {
         @extend .black-link;
-
-        font-family: $serif;
+        
+        font-family: $sans-serif;
+        font-weight: bold;
         font-size: 2.1rem;
-        font-weight: 400;
         line-height: 1;
     }
 }
@@ -334,11 +329,11 @@ nav {
 
     p {
         font-size: 0.95rem;
-        margin: 0px;
     }
 
     a {
         color: $primary;
+        font-family: $sans-serif;
         font-size: 0.95rem;
     }
 }
@@ -350,6 +345,12 @@ nav {
     margin-left: auto;
     margin-right: auto;
     flex: 1 0 auto;
+}
+
+article {
+    h2 {
+        font-family: $sans-serif;
+    }
 }
 
 .article-figure {
@@ -387,38 +388,27 @@ nav {
 }
 
 // SHORTCODE CONTENT
-.twitter-tweet {
-    font-family: $sans-serif !important;
-    border-left: 4px solid $primary !important;
-    color: $dark-gray !important;
-    font-size: 1rem !important;
-    font-style: italic !important;
+.twitter-tweet:not(.twitter-tweet-rendered) {
+    font-family: $sans-serif;
+    border-left: 4px solid $primary;
+    font-size: 1rem;
+    font-style: italic;
     margin-left: 0rem;
-    padding-left: 1.3em !important;
+    padding-left: 1.3em;
 
     p {
-        font-size: 1.1rem;
+        @extend p;
         font-style: normal;
         margin-bottom: 1rem;
         line-height: 155%;
     }
-
-    a {
-        color: $dark-gray !important;
-        text-decoration: underline !important;
-    }
-
-    a:hover,
-    a:focus {
-        text-decoration: underline !important;
-    }
 }
 
 .__h_instagram.card {
-    font-family: $sans-serif !important;
-    font-size: 1.1em !important;
+    font-family: $sans-serif;
+    font-size: 1.1em;
     border: 1px solid $light-gray;
-    margin-top: 1.2em !important;
+    margin-top: 1.2em;
 }
 
 // ARTICLE FOOTER
@@ -536,6 +526,11 @@ footer {
     a {
         @extend .black-link;
     }
+}
+
+.noscript {
+    color: $dark-gray;
+    text-align: center;
 }
 
 // BREAKPOINTS

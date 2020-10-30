@@ -22,15 +22,12 @@
         {{ end }}
         <br/>
         ⁠<time>{{ .Date.Format "January 2, 2006" }}{{if not .Lastmod.IsZero }}–⁠{{ .Lastmod.Format "January 2, 2006" }}{{end}}</time>
-
-        <noscript>
-            <p>
-                ⚠️ JavaScript is used to render math formulas.
-            </p>
-        </noscript>
         
         <p>
-        {{ .Content }}
+            <noscript class="noscript">
+                ⚠️ JavaScript is used to render math formulas.
+            </noscript>
+            {{ .Content }}
         </p>
     </div>
     {{ template "_internal/disqus.html" . }}
@@ -45,14 +42,5 @@
         </script> 
 
     {{ end }}
-
-    <div class="page-footer">
-        {{if .Params.tags}}
-        <hr class="footer-divider">
-        {{ range .Params.tags }}
-            <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
-        {{ end }}
-      {{ end }}
-    </div>
 
 {{end}}
