@@ -9,21 +9,21 @@
 {{ end }}
 
 {{ if eq $type "full" }}
-  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+  {{ with .Get "link" }}<a target="_blank" rel="noopener" href="{{ . }}">{{ end }}
   <img src="{{ .Get "src" }}" {{ with .Get "alt"}}alt="{{ . }}"{{ end }}>
   {{ if .Get "link" }}</a>{{ end }}
   <figcaption>
 {{ else }}
   <span class="marginnote">
   {{ if eq $type "margin" }}
-    {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+    {{ with .Get "link" }}<a target="_blank" rel="noopener" href="{{ . }}">{{ end }}
     <img src="{{ .Get "src" }}" {{ with .Get "alt"}}alt="{{ . }}"{{ end }}>
     {{ if .Get "link" }}</a>{{ end }}
   {{ end }}
 {{ end }}
   {{ with .Get "title"}}<strong>{{ . }} </strong>{{ end}}
   {{ with .Get "caption"}}{{ . }}{{ end }}
-  {{ with .Get "attrlink"}}<a href="{{ .}}">{{ end }}
+  {{ with .Get "attrlink"}}<a target="_blank" rel="noopener" href="{{ .}}">{{ end }}
   {{ with .Get "attr" }}{{ . }}{{ end }}
   {{ if .Get "attrlink" }}</a>{{ end }}
 {{ if eq $type "full" }}
@@ -32,7 +32,7 @@
   </span>
 {{ end }}
 {{ if and (not (eq $type "full")) (not (eq $type "margin")) }}
-  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+  {{ with .Get "link" }}<a target="_blank" rel="noopener" href="{{ . }}">{{ end }}
   <img src="{{ .Get "src" }}" {{ with .Get "alt"}}alt="{{ . }}"{{ end }}>
   {{ if .Get "link" }}</a>{{ end }}
 {{ end }}

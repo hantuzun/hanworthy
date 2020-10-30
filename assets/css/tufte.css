@@ -109,20 +109,6 @@ blockquote footer {
     text-align: right;
 }
 
-section > p,
-section > footer,
-section > table {
-    /* width: 55%; */
-}
-
-/* 50 + 5 == 55, to be the same width as paragraph */
-section > dl,
-section > ol,
-section > ul {
-    width: 50%;
-    -webkit-padding-start: 5%;
-}
-
 dt:not(:first-child),
 li:not(:first-child) {
     margin-top: 0.25rem;
@@ -140,8 +126,8 @@ figure {
 }
 
 figcaption {
-    float: right;
-    clear: right;
+    clear: both;
+    text-align: center;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.1rem;
@@ -150,48 +136,6 @@ figcaption {
     position: relative;
 }
 
-figure.fullwidth figcaption {
-}
-
-.fullwidth {
-}
-
-/* Links: replicate underline that clears descenders */
-/* 
-a:link,
-a:visited {
-    color: inherit;
-}
-
-.no-tufte-underline:link {
-    background: unset;
-    text-shadow: unset;
-}
-
-a:link, .tufte-underline, .hover-tufte-underline:hover {
-    text-decoration: none;
-    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
-    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
-    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    background-repeat: no-repeat, no-repeat, repeat-x;
-    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-    background-position: 0% 93%, 100% 93%, 0% 93%;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    a:link, .tufte-underline, .hover-tufte-underline:hover {
-        background-position-y: 87%, 87%, 87%;
-    }
-}
-
-a:link::selection,
-a:link::-moz-selection {
-    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-    background: #b4d5fe;
-}
-*/
 /* Sidenotes, margin notes, figures, captions */
 img {
     max-width: 100%;
@@ -241,11 +185,6 @@ blockquote .marginnote {
     text-align: left;
 }
 
-div.fullwidth,
-table.fullwidth {
-    width: 100%;
-}
-
 div.table-wrapper {
     overflow-x: auto;
     font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
@@ -280,19 +219,9 @@ h3 > code {
 
 pre > code {
     font-size: 0.9rem;
-    width: 52.5%;
     margin-left: 2.5%;
     overflow-x: auto;
     display: block;
-}
-
-pre.fullwidth > code {
-    width: 90%;
-}
-
-.fullwidth * {
-    max-width: 150% !important;
-    clear:both;
 }
 
 span.newthought {
@@ -339,26 +268,6 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 
-    pre > code {
-        width: 97%;
-    }
-
-    section > dl,
-    section > ol,
-    section > ul {
-        width: 90%;
-    }
-
-    figure {
-        max-width: 90%;
-    }
-
-    figcaption,
-    figure.fullwidth figcaption {
-        margin-right: 0%;
-        max-width: none;
-    }
-
     blockquote {
         margin-left: 1.5em;
         margin-right: 0em;
@@ -375,11 +284,6 @@ label.margin-toggle:not(.sidenote-number) {
 
     .sidenote,
     .marginnote {
-        /* display: none; */
-    /* } */
-
-    /* .margin-toggle:checked + .sidenote, */
-    /* .margin-toggle:checked + .marginnote { */
         display: block;
         float: left;
         left: 1rem;
