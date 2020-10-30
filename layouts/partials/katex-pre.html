@@ -1,0 +1,6 @@
+{{ if .Page.Param "hasMath" }}
+    <noscript class="noscript">
+        ⚠️ JavaScript is used to render math formulas.
+    </noscript>
+    <link rel="stylesheet" type="text/css" href="{{ "css/katex.min.css" | relURL }}" crossorigin="anonymous">
+{{ end }}

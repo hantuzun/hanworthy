@@ -1,0 +1,15 @@
+{{ if .Page.Param "hasMath" }}
+    <script type="text/javascript" src="{{ "js/katex.min.js" | relURL }}" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ "js/auto-render.min.js" | relURL }}"onload="renderMathInElement(document.body);" crossorigin="anonymous"></script>
+    <script>
+        renderMathInElement(document.body, {
+        delimiters: [
+            { left: '\\\\begin{equation*}', right: '\\\\end{equation*}', display: true },
+            { left: '$$', right: '$$', display: true },
+            { left: '\\\[', right: '\\\]', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\\(', right: '\\\)', display: false },
+        ],
+        });
+    </script>
+{{ end }}

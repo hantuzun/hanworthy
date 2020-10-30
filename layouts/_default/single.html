@@ -24,9 +24,7 @@
         ⁠<time>{{ .Date.Format "January 2, 2006" }}{{if not .Lastmod.IsZero }}–⁠{{ .Lastmod.Format "January 2, 2006" }}{{end}}</time>
         
         <p>
-            <noscript class="noscript">
-                ⚠️ JavaScript is used to render math formulas.
-            </noscript>
+            {{ partial "katex-pre.html" . }}
             {{ .Content }}
         </p>
     </div>
@@ -42,5 +40,7 @@
         </script> 
 
     {{ end }}
+
+    {{ partial "katex-post.html" . }}
 
 {{end}}

@@ -134,7 +134,6 @@ figure {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    max-width: 55%;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     margin: 0 0 3em 0;
@@ -149,11 +148,12 @@ figcaption {
     line-height: 1.6;
     vertical-align: baseline;
     position: relative;
-    max-width: 40%;
 }
 
 figure.fullwidth figcaption {
-    margin-right: 24%;
+}
+
+.fullwidth {
 }
 
 /* Links: replicate underline that clears descenders */
@@ -290,8 +290,8 @@ pre.fullwidth > code {
     width: 90%;
 }
 
-.fullwidth {
-    max-width: 90%;
+.fullwidth * {
+    max-width: 150% !important;
     clear:both;
 }
 

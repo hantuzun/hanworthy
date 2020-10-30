@@ -9,12 +9,18 @@
         background-color: $extra-extra-light-gray;
         border-bottom: 1px solid $extra-light-gray;
     }
+    
+    .footer-mobile {
+        border-top: 1px solid $extra-light-gray;
+        background-color: $extra-extra-light-gray;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .sidenote,
     .marginnote {
         width: 90%;
+        padding-right: 10%;
     }
 }
 
@@ -28,14 +34,14 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    html {
+    .content {
         max-width: 768px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    html {
-        max-width: 1024px;
+    .content {
+        max-width: 768px;
     }
 
     // TOP NAV
