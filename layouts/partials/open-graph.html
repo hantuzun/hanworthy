@@ -1,0 +1,21 @@
+{{ if .Params.og_title }}
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="hantuzun.com" />
+<meta property='article:author' content="https://twitter.com/hantuzn" />
+<meta property="og:title" content="{{ .Params.og_title }}" />
+{{ end }}
+{{ if .Params.og_description }}
+<meta property="og:description" content="{{ .Params.og_description }}" />
+{{ end }}
+{{ if .Params.og_image }}
+<meta property="og:image" content="{{ .Params.og_image }}" />
+{{ end }}
+{{ if .Params.og_image_type }}
+<meta property="og:image:type" content="{{ .Params.og_image_type }}">
+{{ end }}
+{{ if .Params.og_image_width }}
+<meta property="og:image:width" content="{{ .Params.og_image_width }}">
+{{ end }}
+{{ if .Params.og_image_height }}
+<meta property="og:image:height" content="{{ .Params.og_image_height }}">
+{{ end }}
